@@ -26,7 +26,7 @@ module to_Upper(A7,A6,A5,A4,A3,A2,A1,A0, b7, b6, b5, b4, b3, b2, b1, b0);
   or #(10) G6 (F, w1, w2, w3, w4, w5);
   
   /* BUFFERS ~ we keep A0-A4 & A6-A7 constant so we add buffers to transfer to corresponding bit placement. A5 takes in F input, 
-  which is what was calculated with the NOT, AND, and OR gates. This is it is determined to flip or keep A5 as if, given that it is not a
+  which is what was calculated with the NOT, AND, and OR gates. This is used to determine to flip or keep A5 as if, given that it is not a
   lowercase character. 
   */
   buf #4 O1 (b7, A7);
