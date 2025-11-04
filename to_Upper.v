@@ -17,11 +17,11 @@ module to_Upper(A7,A6,A5,A4,A3,A2,A1,A0, b7, b6, b5, b4, b3, b2, b1, b0);
   
   //AND GATES ~ sum of products
   and #(10) G1 (w1, A7, A5);
-  and #(10) G2 (w2, notA6, A5);
+  and #(10) G2 (w2, notA7, notA6, A5);
   and #(10) G3 (w3, notA7, A5, notA4, notA3, notA2, notA1, notA0);
   and #(10) G4 (w4, notA7, A6, A5, A4, A3, A2);
   and #(10) G5 (w5, notA7, A6, A5, A4, A3, notA2, A1, A0);
-  
+    
   //OR GATE ~ combines all SOP terms 
   or #(10) G6 (F, w1, w2, w3, w4, w5);
   
